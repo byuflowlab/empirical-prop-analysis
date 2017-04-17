@@ -152,8 +152,8 @@ pitchNom=4. #Pitch in inches
 
 #we want x number of bumps (this is hard coded into the chord dist curve)
 #initialize radius array with enough elements to define the bumps
-numSections=50
-numSec=50.
+numSections=300
+numSec=300.
 
 #of hub top and bottom locations
 upper=.07*R #this is actually the bottom, make it smaller to decrease it's distance

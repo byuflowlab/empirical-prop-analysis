@@ -4,9 +4,9 @@ close all
 %Propeller profile for Graupner CAM Slim 9x6
 
 
-bladeOffset=.02;
-N = 10;
-r = linspace(.1,.95,N);
+%bladeOffset=.02; add/subtract to the horizontal or sweep translate portion (line 461)
+N = 11;
+r = linspace(.1,.99,N);
 %Drop down to about line 430 for the propeller generation
 
 %Propeller Parameters
@@ -240,7 +240,8 @@ airfoilE216=[
 0.94105	,0.14;
 0.96763	,0.090865385;
 0.98608	,0.043173077;
-0.99661	,0.010865385
+0.99661	,0.010865385;
+1,0
 ];
 
 airfoilE212=[
@@ -303,9 +304,10 @@ airfoilE212=[
 0.94382	,0.062464455;
 0.96851	,0.043412322;
 0.98615	,0.021895735;
-0.99657	,0.005781991];
+0.99657	,0.005781991
+1,0];
 
-clarky = [
+clarkytop = [
 0.0000000, 0.0000000;
  0.0005000, 0.0023390;
  0.0010000 ,0.0037271;
@@ -366,8 +368,9 @@ clarky = [
  0.9700000, 0.0076868;
  0.9800000, 0.0053335;
  0.9900000, 0.0029690;
- 1.0000000, 0.0005993 ;
- 0.0000000, 0.0000000;
+ 1.0000000, 0.000 ];
+ %0.0000000, 0.0000000;
+ clarkybot = [
  0.0005000, -.0046700;
  0.0010000, -.0059418;
  0.0020000, -.0078113;
@@ -427,8 +430,9 @@ clarky = [
  0.9700000, -.0017011;
  0.9800000, -.0013339;
  0.9900000, -.0009666;
- 1.0000000, -.0005993];
-
+ 1.0000000, 0];
+ clarky = [flipud(clarkytop);clarkybot];
+ %clarky = clarky(2:2:end,:); %Delete every other
 
 
 chord = interp1(chorddist(:,1),chorddist(:,2),r,'spline');
@@ -467,8 +471,8 @@ for i = 1:N
     %Append Z to airfoil
     foil = [foil,Z];
     
-    filename = ['airfoil',num2str(i),'.csv'];
-    csvwrite(filename,foil);
+    filename = ['airfoil',num2str(i),'.txt'];
+    %csvwrite(filename,foil);
     dlmwrite(filename,foil,' ')
     
     %Append airfoil to prop
@@ -481,8 +485,8 @@ scatter3(prop(:,1),prop(:,2),prop(:,3))
 xlim([-1,1])
 ylim([-1,1])
 
-% csvwrite('apc9x4_5points.csv',prop);
-% dlmwrite('apc9x4_5points.txt',prop,' ')
+ csvwrite('apc9x4_5points.csv',prop);
+dlmwrite('apc9x4_5points.txt',prop,' ')
         
 
 
