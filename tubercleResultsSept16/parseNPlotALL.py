@@ -148,47 +148,47 @@ airSpeeds=[0.,
 
 
 
-folderPath = 'C:\Users\owner\Desktop\CPAW\TestOutput\Baseline2'
+folderPath = './Baseline2'
 Baseline2=readInFiles(folderPath,airSpeeds)
 # np.savetxt('baseline.csv', Baseline, delimiter=',')
 
-folderPath = 'C:\Users\owner\Desktop\CPAW\TestOutput\Baseline3'
+folderPath = './Baseline3'
 Baseline3=readInFiles(folderPath,airSpeeds)
 # np.savetxt('baseline.csv', Baseline, delimiter=',')
 
-folderPath = 'C:\Users\owner\Desktop\CPAW\TestOutput\One'
+folderPath = './One'
 one=readInFiles(folderPath,airSpeeds)
 #np.savetxt('MM.csv', MM, delimiter=',')
 
-folderPath = 'C:\Users\owner\Desktop\CPAW\TestOutput\Two'
+folderPath = './Two'
 two=readInFiles(folderPath,airSpeeds)
 # np.savetxt('val6x4.csv', val6x4, delimiter=',')
 
-folderPath = 'C:\Users\owner\Desktop\CPAW\TestOutput\Three'
+folderPath = './Three'
 three=readInFiles(folderPath,airSpeeds)
 # np.savetxt('val6x4.csv', val6x4, delimiter=',')
 
-folderPath = 'C:\Users\owner\Desktop\CPAW\TestOutput\Four'
+folderPath = './Four'
 four=readInFiles(folderPath,airSpeeds)
 # np.savetxt('val6x4.csv', val6x4, delimiter=',')
 
-folderPath = 'C:\Users\owner\Desktop\CPAW\TestOutput\Five'
+folderPath = './Five'
 five=readInFiles(folderPath,airSpeeds)
 # np.savetxt('val6x4.csv', val6x4, delimiter=',')
 
-folderPath = 'C:\Users\owner\Desktop\CPAW\TestOutput\Six'
+folderPath = './Six'
 six=readInFiles(folderPath,airSpeeds)
 # np.savetxt('val6x4.csv', val6x4, delimiter=',')
 
-folderPath = 'C:\Users\owner\Desktop\CPAW\TestOutput\Seven'
+folderPath = './Seven'
 seven=readInFiles(folderPath,airSpeeds)
 # np.savetxt('val6x4.csv', val6x4, delimiter=',')
 
-folderPath = 'C:\Users\owner\Desktop\CPAW\TestOutput\Eight'
+folderPath = './Eight'
 eight=readInFiles(folderPath,airSpeeds)
 # np.savetxt('val6x4.csv', val6x4, delimiter=',')
 
-folderPath = 'C:\Users\owner\Desktop\CPAW\TestOutput\Nine'
+folderPath = './Nine'
 nine=readInFiles(folderPath,airSpeeds)
 # np.savetxt('val6x4.csv', val6x4, delimiter=',')
 
